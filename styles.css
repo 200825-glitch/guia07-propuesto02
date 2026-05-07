@@ -2,12 +2,29 @@ body {
     font-family: Arial;
     text-align: center;
     margin-top: 40px;
+    background-color: #f4f4f4;
 }
 
 input {
     padding: 8px;
+    margin: 5px;
 }
 
 button {
-    padding: 8px;
+    padding: 8px 12px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#listaContactos {
+    margin-top: 20px;
+}
+
+.contacto {
+    background-color: white;
+    width: 300px;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px gray;
 }

@@ -27,9 +27,15 @@ function agregarContacto() {
         document.getElementById("listaContactos");
 
     lista.innerHTML += `
-        <p>
-            ${nombre} - ${telefono} - ${correo}
-        </p>
+        <div class="contacto">
+            <h3>${nombre}</h3>
+            <p>📞 ${telefono}</p>
+            <p>✉️ ${correo}</p>
+
+            <button onclick="eliminarContacto(this)">
+                Eliminar
+            </button>
+        </div>
     `;
 
     mensaje.textContent =
@@ -38,4 +44,12 @@ function agregarContacto() {
     document.getElementById("nombre").value = "";
     document.getElementById("telefono").value = "";
     document.getElementById("correo").value = "";
+}
+
+function eliminarContacto(boton) {
+
+    boton.parentElement.remove();
+
+    document.getElementById("mensaje").textContent =
+        "Contacto eliminado";
 }
