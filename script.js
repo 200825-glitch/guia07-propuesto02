@@ -1,3 +1,20 @@
+lista.innerHTML += `
+    <div class="contacto">
+        <h3>${nombre}</h3>
+        <p>📞 ${telefono}</p>
+        <p>✉️ ${correo}</p>
+
+        <button onclick="eliminarContacto(this)">
+            Eliminar
+        </button>
+    </div>
+`;
+
+function eliminarContacto(boton) {
+
+    boton.parentElement.remove();
+}
+
 function agregarContacto() {
 
     let nombre =
