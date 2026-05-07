@@ -77,12 +77,7 @@ function eliminarContacto(boton) {
 
     document.getElementById("mensaje").textContent =
         "Contacto eliminado";
-}
-
-function eliminarContacto(boton) {
-
-    let confirmar =
-        confirm("¿Desea eliminar este contacto?");
+    let confirmar = confirm("¿Desea eliminar este contacto?");
 
     if (confirmar) {
 
@@ -91,4 +86,15 @@ function eliminarContacto(boton) {
         document.getElementById("mensaje").textContent =
             "Contacto eliminado correctamente";
     }
+    boton.parentElement.remove();
+    actualizarContador();
+}
+
+function actualizarContador() {
+
+    let total =
+        document.querySelectorAll(".contacto").length;
+
+    document.getElementById("contador").textContent =
+        "Total contactos: " + total;
 }
