@@ -35,3 +35,9 @@ button {
     border: none;
     border-radius: 5px;
 }
+
+#mensaje {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}

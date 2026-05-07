@@ -70,3 +70,17 @@ function eliminarContacto(boton) {
     document.getElementById("mensaje").textContent =
         "Contacto eliminado";
 }
+
+function eliminarContacto(boton) {
+
+    let confirmar =
+        confirm("¿Desea eliminar este contacto?");
+
+    if (confirmar) {
+
+        boton.parentElement.remove();
+
+        document.getElementById("mensaje").textContent =
+            "Contacto eliminado correctamente";
+    }
+}
