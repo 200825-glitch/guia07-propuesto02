@@ -10,6 +10,14 @@ lista.innerHTML += `
     </div>
 `;
 
+lista.innerHTML += `
+    <div class="contacto">
+        <h3>${nombre}</h3>
+        <p>📞 ${telefono}</p>
+        <p>✉️ ${correo}</p>
+    </div>
+`;
+
 function eliminarContacto(boton) {
 
     boton.parentElement.remove();
