@@ -1,28 +1,3 @@
-lista.innerHTML += `
-    <div class="contacto">
-        <h3>${nombre}</h3>
-        <p>📞 ${telefono}</p>
-        <p>✉️ ${correo}</p>
-
-        <button onclick="eliminarContacto(this)">
-            Eliminar
-        </button>
-    </div>
-`;
-
-lista.innerHTML += `
-    <div class="contacto">
-        <h3>${nombre}</h3>
-        <p>📞 ${telefono}</p>
-        <p>✉️ ${correo}</p>
-    </div>
-`;
-
-function eliminarContacto(boton) {
-
-    boton.parentElement.remove();
-}
-
 function agregarContacto() {
 
     let nombre =
@@ -69,15 +44,14 @@ function agregarContacto() {
     document.getElementById("nombre").value = "";
     document.getElementById("telefono").value = "";
     document.getElementById("correo").value = "";
+
+    actualizarContador();
 }
 
 function eliminarContacto(boton) {
 
-    boton.parentElement.remove();
-
-    document.getElementById("mensaje").textContent =
-        "Contacto eliminado";
-    let confirmar = confirm("¿Desea eliminar este contacto?");
+    let confirmar =
+        confirm("¿Desea eliminar este contacto?");
 
     if (confirmar) {
 
@@ -85,9 +59,9 @@ function eliminarContacto(boton) {
 
         document.getElementById("mensaje").textContent =
             "Contacto eliminado correctamente";
+
+        actualizarContador();
     }
-    boton.parentElement.remove();
-    actualizarContador();
 }
 
 function actualizarContador() {
